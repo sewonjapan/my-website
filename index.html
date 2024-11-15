@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S E W O N</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="sewonlogo.png" alt="SEWON">
+                </a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="downloads.html">FREE DOWNLOADS</a></li>
+                <li><a href="coming-soon.html">STORE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/sewon.sewon/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://soundcloud.com/sewonmusic" target="_blank" class="social-icon"><i class="fab fa-soundcloud"></i></a>
+                <a href="https://open.spotify.com/artist/1FDPOeCK0TGVO8I3mUnctC?si=64CQJIHRStK5E1MkDZjtyg" target="_blank" class="social-icon"><i class="fab fa-spotify"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="main-image">
+            <img src="sewonmain.jpg" alt="SEWON">
+        </div>
+        <div class="hero-content">
+            <div class="tour-dates">
+                <div class="tour-date">
+                    <span class="date">NOV 16</span>
+                    <div class="venue-info">
+                        <span class="venue">SEL OCTAGON TOKYO</span>
+                        <span class="with">with Nifra</span>
+                    </div>
+                    <span class="ticket-wrapper">
+                        <button class="info-btn" onclick="openPopup('flyers_img/20241116_WW_Nifra.jpg')">INFO</button>
+                    </span>
+                </div>
+                <div class="tour-date">
+                    <span class="date">NOV 22</span>
+                    <div class="venue-info">
+                        <span class="venue">SEL OCTAGON TOKYO</span>
+                        <span class="with">with Ray Volpe</span>
+                    </div>
+                    <span class="ticket-wrapper">
+                        <button class="info-btn" onclick="openPopup('flyers_img/20241122_ww_rayvolpe.PNG')">INFO</button>
+                    </span>
+                </div>
+                <div class="tour-date">
+                    <span class="date">NOV 29</span>
+                    <div class="venue-info">
+                        <span class="venue">OSAKA OWL</span>
+                    </div>
+                    <span class="ticket-wrapper">
+                        <button class="info-btn" onclick="openPopup('flyers_img/20241129.jpg')">INFO</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mailing-list">
+        <h2>Join our mailing list for important updates</h2>
+        <form>
+            <div class="input-container">
+                <input type="email" placeholder="Email Address" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <div class="bottom-social-icons">
+        <a href="https://www.instagram.com/sewon.sewon/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://soundcloud.com/sewonmusic" target="_blank" class="social-icon"><i class="fab fa-soundcloud"></i></a>
+        <a href="https://open.spotify.com/artist/1FDPOeCK0TGVO8I3mUnctC?si=64CQJIHRStK5E1MkDZjtyg" target="_blank" class="social-icon"><i class="fab fa-spotify"></i></a>
+    </div>
+
+    <div id="flyer-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <img id="popup-image" src="" alt="Event Flyer">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
