@@ -828,14 +828,17 @@ html {
     justify-content: center;
     gap: 2rem;
     padding: 2rem 0;
-    margin-top: -14rem;
+    position: relative;
+    top: -14rem;
     background: var(--dark-bg);
+    z-index: 1;
 }
 
 .bottom-social-icons .social-icon {
     font-size: 1.4rem;
     opacity: 0.7;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
+    pointer-events: auto;
 }
 
 .bottom-social-icons .social-icon:hover {
@@ -844,7 +847,7 @@ html {
 
 @media (max-width: 768px) {
     .bottom-social-icons {
-        margin-top: -12rem;
+        top: -12rem;
         padding-top: 1.5rem;
     }
     

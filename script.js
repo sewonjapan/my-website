@@ -39,4 +39,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // 모든 소셜 아이콘에 대해 이벤트 핸들러 추가 (상단 + 하단)
+    const allSocialLinks = document.querySelectorAll('.social-icon');
+    allSocialLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const url = this.getAttribute('href');
+            window.open(url, '_blank');
+            return false; // 추가 이벤트 전파 방지
+        }, { passive: false }); // 이벤트 캡처링 비활성화
+    });
 }); 
