@@ -155,42 +155,53 @@ nav a:hover {
 
 @media (max-width: 768px) {
     .tour-date {
-        grid-template-columns: 60px 1fr;
-        gap: 0.8rem;
-        padding: 1rem 0;
-    }
-    
-    .date {
-        font-size: 0.8rem;
-        letter-spacing: 0.1em;
+        grid-template-columns: 60px minmax(180px, 1fr) 80px;
+        gap: 0.5rem;
+        padding: 0.8rem 0.5rem;
+        align-items: center;
     }
     
     .venue-info {
-        grid-column: 2;
-        flex-direction: row;
-        gap: 0.5rem;
-        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 0.3rem;
+        white-space: normal;
+        overflow: visible;
+        padding-left: 0.5rem;
     }
     
     .venue {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        width: 100%;
+        text-overflow: clip;
+        overflow: visible;
+        text-align: left;
+        line-height: 1.2;
     }
     
     .with {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+        text-align: left;
     }
     
     .ticket-wrapper {
-        grid-column: 1 / -1;
-        display: flex;
-        justify-content: flex-end;
-        margin-top: 0.8rem;
+        grid-column: 3;
+        margin: 0;
+        justify-self: end;
     }
     
     .info-btn {
-        width: 100px;
-        padding: 0.5rem 0;
-        font-size: 0.7rem;
+        width: 80px;
+        padding: 0.4rem 0;
+        font-size: 0.65rem;
+        margin: 0;
+    }
+
+    .date {
+        font-size: 0.75rem;
+        grid-column: 1;
     }
 }
 
@@ -539,15 +550,40 @@ section h2 {
 
 @media (max-width: 768px) {
     .downloads {
-        padding: 6rem 2rem;
+        padding: 6rem 1rem 4rem;
     }
     
     .downloads-grid {
-        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
     
-    .downloads-subtitle {
-        font-size: 1.4rem;
+    .download-item {
+        padding: 0.8rem;
+    }
+    
+    .download-info h3 {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .download-info p {
+        font-size: 0.7rem;
+        margin-bottom: 1rem;
+    }
+    
+    .download-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.7rem;
+    }
+    
+    .downloads-header {
+        padding-top: 2rem;
+    }
+    
+    .downloads h2 {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -626,7 +662,7 @@ html {
     }
 }
 
-/* main-image 스타일 수정 */
+/* main-image 스타일 수 */
 .main-image {
     width: 100%;
     max-width: 1200px;
@@ -757,7 +793,13 @@ html {
 
 @media (max-width: 768px) {
     .contact {
-        padding: 6rem 1.5rem 3rem;
+        padding: 8rem 1.5rem 3rem;
+    }
+    
+    .contact h2 {
+        font-size: 0.9rem;
+        margin-bottom: 3rem;
+        padding-top: 1rem;
     }
     
     .contact-container {
@@ -913,16 +955,22 @@ html {
 /* 햄버거 메뉴 추가 */
 .menu-toggle {
     display: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
+    padding: 0.5rem;
 }
 
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+        margin-right: -0.5rem;
+    }
+    
+    .nav-container {
+        padding: 0 0.5rem;
     }
 }
 
@@ -963,5 +1011,57 @@ html {
 
     .social-icons {
         order: 2; /* 소셜 아이콘을 가운데로 */
+    }
+}
+
+@media (max-width: 768px) {
+    .mailing-list {
+        padding: 2rem 1rem; /* 패딩 축소 */
+    }
+
+    .mailing-list h2 {
+        font-size: 10px; /* 제목 크기 축소 */
+        margin-bottom: 1rem;
+    }
+
+    .mailing-list form {
+        display: flex;
+        gap: 0.5rem;
+        width: 100%;
+        max-width: 400px; /* 전체 최대 너비 제한 */
+    }
+
+    .input-container {
+        flex: 7; /* 7:3 비율 적용 */
+    }
+
+    .mailing-list input {
+        padding: 0.75rem; /* 패딩 50% 축소 */
+        font-size: 0.9rem; /* 폰트 크기 축소 */
+        width: 100%;
+    }
+
+    .mailing-list button {
+        flex: 3; /* 7:3 비율 적용 */
+        padding: 0.75rem 1rem; /* 패딩 50% 축소 */
+        font-size: 0.9rem; /* 폰트 크기 축소 */
+        white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    }
+}
+
+@media (max-width: 768px) {
+    .coming-soon h1 {
+        font-size: 1.5rem; /* 폰트 크기 축소 */
+        font-weight: 400;
+        letter-spacing: 0.3em; /* 자간 축소 */
+        margin-bottom: 1rem;
+        white-space: nowrap; /* 한 줄 표시 */
+    }
+
+    .coming-soon p {
+        font-size: 0.8rem; /* 부제목 폰트 크기 축소 */
+        letter-spacing: 0.2em; /* 부제목 자간 축소 */
+        opacity: 0.7;
+        white-space: nowrap; /* 부제목도 한 줄 표시 */
     }
 } 
